@@ -2,7 +2,7 @@ package token
 
 type TokenType string
 
-// Token { Type : "identifier", Literal: "foo" }
+// Token { Type : "IDENT", Literal: "foo" }
 type Token struct {
     Type TokenType
     Literal string
@@ -62,7 +62,7 @@ var keywords = map[string]TokenType {
 func LookupIdent(ident string) TokenType {
     tt, ok := keywords[ident]
     if !ok {
-        return IDENT 
+        return IDENT
     }
     return tt
 }

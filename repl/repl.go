@@ -1,4 +1,4 @@
-package repl 
+package repl
 
 import(
     "bufio"
@@ -17,7 +17,7 @@ func Start(in io.Reader) {
         fmt.Printf(PROMPT)
         scanned := scanner.Scan()
         if !scanned {
-            return 
+            return
         }
 
         line := scanner.Text()
